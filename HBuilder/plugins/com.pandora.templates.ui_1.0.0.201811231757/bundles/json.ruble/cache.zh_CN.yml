@@ -1,0 +1,183 @@
+!!com.aptana.scripting.model.BundleElement
+author: Christopher Williams
+children:
+- !!com.aptana.scripting.model.MenuElement
+  children:
+  - children: &id001 []
+    commandName: Reformat Document / Selection
+    customProperties: null
+    displayName: Reformat Document / Selection
+    id: null
+    locationURI: null
+    path: bundle.rb
+    scope: null
+  commandName: JSON
+  customProperties: null
+  displayName: JSON
+  id: null
+  locationURI: null
+  path: bundle.rb
+  scope: source.json
+- !!com.aptana.scripting.model.CommandElement
+  async: false
+  customProperties: null
+  displayName: Reformat Document / Selection
+  id: null
+  input: [selection]
+  inputPath: null
+  keyBindingMap: null
+  menuId: null
+  outputPath: null
+  outputType: replace_selection
+  path: commands\reformat_document.rb
+  runType: current_thread
+  scope: source.json
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  category: null
+  customProperties:
+    prefix_values: [wpage]
+  description: null
+  displayName: page
+  expansion: "{\n\t\"webviewId\": \"$1\",\n\t\"matchUrls\": [\n\t\t{\n\t\t\t\"hostname\"\
+    : \"R:${2:.*}\",\n\t\t\t\"pathname\": \"R:${3:.*}\"\n\t\t}\n\t],\n\t\"webviewParameter\"\
+    : {\n\t\t\"titleNView\": {\n\t\t\t\"backgroundColor\": \"#F7F7F7\",\n\t\t\t\"\
+    titleColor\": \"#000000\",\n\t\t\t\"titleSize\": \"17px\",\n\t\t\t\"titleText\"\
+    : \"标题$4\",\n\t\t\t\"splitLine\": {\n\t\t\t\t\"color\": \"#CCCCCC\",\n\t\t\t\t\
+    \"height\": \"1px\"\n\t\t\t},\n\t\t\t\"autoBackButton\": true\n\t\t},\n\t\t\"\
+    appendCss\": \"$5\",\n\t\t\"appendJs\": \"$6\"\n\t},\n\t\"easyConfig\": {\n\t\t\
+    \"back\": {\n\t\t\t\"before\": [{\n\t\t\t\t\"popupSelector\": \"$7\",\n\t\t\t\t\
+    \"closeSelector\": \"$8\",\n\t\t\t\t\"eventType\": \"click$9\"\n\t\t\t}]\n\t\t\
+    }\n\t}\n}$0"
+  iconPath: null
+  id: null
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  locationType: SITEMAP
+  menuId: null
+  needApplyReContentAssist: false
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets\snippets.rb
+  runType: current_thread
+  scope: source.json
+  tags: *id001
+  version: null
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  category: null
+  customProperties:
+    prefix_values: [wmatchurl]
+  description: null
+  displayName: matchurl
+  expansion: "{\n\t\"hostname\": \"R:${1:.*}\",\n\t\"pathname\": \"R:${2:.*}\"\n}$0"
+  iconPath: null
+  id: null
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  locationType: SITEMAP
+  menuId: null
+  needApplyReContentAssist: false
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets\snippets.rb
+  runType: current_thread
+  scope: source.json
+  tags: *id001
+  version: null
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  category: null
+  customProperties:
+    prefix_values: [wbefore]
+  description: null
+  displayName: before
+  expansion: "{\n\t\"popupSelector\": \"$1\",\n\t\"closeSelector\": \"$2\",\n\t\"\
+    eventType\": \"click$3\"\n}$0"
+  iconPath: null
+  id: null
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  locationType: SITEMAP
+  menuId: null
+  needApplyReContentAssist: false
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets\snippets.rb
+  runType: current_thread
+  scope: source.json
+  tags: *id001
+  version: null
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  category: null
+  customProperties:
+    prefix_values: [wwaiting]
+  description: null
+  displayName: waiting
+  expansion: "\"waiting\": {\n\t\"title\":\"$1\",\n\t\"options\":{\n        \"background\"\
+    :\"$2\",\n        \"color\":\"$3\"\n   }\n}$0"
+  iconPath: null
+  id: null
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  locationType: SITEMAP
+  menuId: null
+  needApplyReContentAssist: false
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets\snippets.rb
+  runType: current_thread
+  scope: source.json
+  tags: *id001
+  version: null
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  category: null
+  customProperties:
+    prefix_values: [wtab]
+  description: null
+  displayName: tabBar
+  expansion: "\"tabBar\": {\n\t\"height\":\"50px$1\",\n\t\"list\":[{\n\t\t\"url\"\
+    :\"\"\n\t},{\n\t\t\"url\":\"\"\n\t},{\n\t\t\"url\":\"\"\n\t},{\n\t\t\"url\":\"\
+    \"\n\t}]\n}$0"
+  iconPath: null
+  id: null
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  locationType: SITEMAP
+  menuId: null
+  needApplyReContentAssist: false
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets\snippets.rb
+  runType: current_thread
+  scope: source.json
+  tags: *id001
+  version: null
+  workingDirectoryType: UNDEFINED
+copyright: Copyright 2010 Aptana Inc. Distributed under the MIT license.
+customProperties: null
+decreaseIndentMarkers: {!scope 'source.json': !regexp '(?-mix:^(.*\*\/)?\s*(\}|\))([^{]*\{)?([;,]?\s*|\.[^{]*|\s*\)[;\s]*)$)'}
+description: JSON bundle ported from James Edward Gray II's TextMate bundle. Syntax highlight for <a href="http://json.org/">JavaScript Object Notation</a> files, often used as a lightweight serialization format.
+displayName: JSON
+fileTypeRegistry: &id002 {}
+fileTypes: *id001
+foldingStartMarkers: *id002
+foldingStopMarkers: *id002
+increaseIndentMarkers: {!scope 'source.json': !regexp '(?-mix:^.*(\{[^}"'''']*|\([^)"'''']*|<script(\s+\S*)?>\s*)$)'}
+license: null
+licenseUrl: null
+path: bundle.rb
+repository: git://github.com/aptana/json.ruble.git
+visible: true

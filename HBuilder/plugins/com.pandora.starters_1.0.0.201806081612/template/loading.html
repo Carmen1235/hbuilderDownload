@@ -1,0 +1,109 @@
+﻿<!DOCTYPE HTML>
+<html lang=zh-cn>
+<script type="text/javascript" src="scripts/invoke.js"></script>
+	<head>
+		<!--
+        	作者：Houfeng@DCloud.io
+        	时间：2015-04-05
+        	描述：HBuilder 登录界面
+        -->
+		<title>Loading | HBuilder</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<link rel="stylesheet" href="styles/loading.css" type="text/css" />
+		<style>
+			a{
+				text-decoration: none;
+				cursor: pointer;
+			}
+			
+			.progressbar {
+				display: none;
+			}
+			.progressbar-no-animation {
+				display: block;
+			}
+			.hb-slow-suggest{
+				width: 70%;
+				left:15%;
+				position: absolute;
+				top: 72%;
+				display: none;
+			}
+			.hb-slow-suggest-title{
+				margin: 0 auto;
+				width: 320px;
+				text-align: center;
+				color: #D74B28; 
+				font-size: 14px;
+			}
+			.hb-slow-suggest-content{
+				margin: 4px auto 0px;
+				padding-left:120px;
+				width: 270px;
+				line-height: 20px;
+			}
+			.hb-slow-suggest-content a{
+				color: #D74B28;
+				font-size: 12px;
+			}
+		</style>
+		<script>
+			window.loginCallback = function() {};
+		</script>
+		<script type="text/javascript">
+//			function maxTimeOut(){
+
+//				setTimeout(function(){invoke.openUrl('1.bat');},15*1000);
+
+//			}
+
+//			maxTimeOut();
+			function maxTimeOut() {
+				setTimeout(function() {
+					document.querySelector('.hb-slow-suggest').style.display = 'block';
+				}, 5000);
+			}
+			maxTimeOut();
+			
+			function goSuggest(cs) {
+				if(cs == 'dcloud'){
+					invoke.openUrl('http://www.dcloud.io/hbuilderx.html');
+				}else{
+					invoke.openUrl(decodeURI(location.href).replace("loading.html","reset.bat").replace("file:///",""));
+					//ClearAllUserInfo();
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<div class="container png">
+			<div class="progressbar">
+				<div class="progress" style="-webkit-animation-duration:3000ms;-webkit-animation-delay:0ms;"></div>
+				<div class="progress" style="-webkit-animation-duration:3000ms;-webkit-animation-delay:160ms;"></div>
+				<div class="progress" style="-webkit-animation-duration:3000ms;-webkit-animation-delay: 320ms;"></div>
+				<div class="progress" style="-webkit-animation-duration:3000ms;-webkit-animation-delay: 480ms;"></div>
+				<div class="progress" style="-webkit-animation-duration:3000ms;-webkit-animation-delay: 640ms;"></div>
+			</div>
+			<div class="progressbar-no-animation"></div>
+			
+			<div class="hb-slow-suggest">
+				<div class="hb-slow-suggest-title" id='test'>
+					您的启动速度过慢，建议：
+				</div>
+				<div class="hb-slow-suggest-content" >
+					<a onclick="goSuggest('dcloud')">1. 更换启动速度更快的HBuilderX</a><br />
+					<a onclick="goSuggest('bat')">2. 可能是配置文件损坏，请点此还原配置</a>
+				</div>
+			</div>
+		</div>
+		<!--[if lte IE 6]> 
+			<script type="text/javascript" src="scripts/ddpng.js"></script>
+			<script>
+				DD_belatedPNG.fix('.png,.png:hover,.png:active');
+			</script>
+		<![endif]-->
+	</body>
+
+</html>
